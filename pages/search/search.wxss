@@ -1,0 +1,47 @@
+/* pages/search/search.wxss */
+
+.search .historyData {
+  padding-bottom: 40rpx;
+}
+.search .historyData .title {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search .historyData .historyDataLoop {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+}
+.search .historyData .historyDataLoop .item {
+  padding: 6rpx 10rpx;
+  border: 2rpx solid #969696;
+  margin: 10rpx 10rpx 0 0;
+}
+.search .hotKeywordList .title {
+  padding: 20rpx;
+}
+.search .hotKeywordList .hotKeywordListLoop {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+} 
+.search .hotKeywordList .hotKeywordListLoop .item {
+  padding: 6rpx 10rpx;
+  border: 2rpx solid #969696;
+  margin: 10rpx 10rpx 0 0;
+}
+.red {
+  color: red;
+  border: 2rpx solid red !important;
+}
+.search .keywords {
+  padding: 30rpx;
+}
+.search .keywords .item {
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #f2f2f2;
+}

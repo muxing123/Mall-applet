@@ -1,0 +1,51 @@
+/* components/index/goodslist/goodslist.wxss */
+.goodslist .title {
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  text-align: center;
+}
+.goodslist .goodsListLoop {
+  padding: 16rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+.goodslist .goodsListLoop .item {
+  background: white;
+  width: 48%;
+  font-size: 28rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.goodslist .goodsListLoop .item .pic {
+  width: 100%;
+  height: 300rpx;
+}
+.goodslist .goodsListLoop .item .name {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+.goodslist .goodsListLoop .item .price {
+  font-size: 26rpx;
+  color: red;
+  padding-top: 4rpx;
+}
+.goodslist .goodsListLoop .jump {
+  background: white;
+  width: 48%;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goodslist .goodsListLoop .jump .arrow {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+}
+.goodslist .bottom {
+  background: white;
+  height: 30rpx;
+}

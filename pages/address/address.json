@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-swipe-cell": "../../lib/vant/swipe-cell/index",
+    "van-cell": "../../lib/vant/cell/index"
+  }
+}

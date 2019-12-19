@@ -1,0 +1,103 @@
+<!--pages/goodsdetail/goodsdetail.wxml-->
+<import src="../../lib/wxParse/wxParse.wxml" />
+<view class="goodsdetail">
+  <van-goods-action>
+    <van-goods-action-icon icon="like-o" text="收藏" bind:click="addcollect" class="{{collected === true ? 'red' : ''}}" />
+    <van-goods-action-icon icon="cart-o" text="购物车" bind:click="goCart" />
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="setShow" />
+    <van-goods-action-button text="立即购买" bind:click="setShow" />
+  </van-goods-action>
+  <view class="inner">
+    <view class="gallery">
+      <swiper indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
+        <block wx:for="{{gallery}}" wx:key="{{index}}">
+          <swiper-item class="radius">
+            <view class="box">
+              <image src="{{item.img_url}}" class="img"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="advantage">
+      <view class="item">
+        <view class="circle"></view>
+        <view>30天无忧退货</view>
+      </view>
+      <view class="item">
+        <view class="circle"></view>
+        <view>48小时快速退款</view>
+      </view>
+      <view class="item">
+        <view class="circle"></view>
+        <view>满88元免邮费</view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="name">{{info.name}}</view>
+      <view class="brief">{{info.goods_brief}}</view>
+      <view class="price">￥{{info.retail_price}}</view>
+      <view class="specifications" bindtap="setShow">
+        <view>请选择规格数量</view>
+        <van-icon name="arrow" />
+      </view>
+      <van-popup show="{{ show }}" bind:close="onClose" position="bottom" custom-style="height: 45%;" closeable close-icon="close">
+        <view class="goodsInfo">
+          <image src="{{info.primary_pic_url}}" class="pic"></image>
+          <view class="right">
+            <view class="goodsprice">价格￥{{info.retail_price}}</view>
+            <view>请选择数量</view>
+          </view>
+        </view>
+        <view class="num">数量</view>
+        <van-stepper value="{{value}}" bind:change="onChange" input-width="90rpx" button-size="90rpx" />
+        <van-goods-action>
+          <van-goods-action-icon icon="like-o" text="收藏" bind:click="addcollect" class="{{collected === true ? 'red' : ''}}" />
+          <van-goods-action-icon icon="cart-o" text="购物车" bind:click="goCart" />
+          <van-goods-action-button text="加入购物车" type="warning" bind:click="onCart" />
+          <van-goods-action-button text="立即购买" bind:click="onBuy" />
+        </van-goods-action>
+      </van-popup>
+    </view>
+    <view class="attribute">
+      <view class="content">
+        <view class="title">商品参数</view>
+        <view class="attributeLoop">
+          <view class="item" wx:for="{{attribute}}" wx:key="{{index}}">
+            <view class="name">{{item.name}}</view>
+            <view class="value">{{item.value}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="desc">
+      <template is="wxParse" data="{{wxParseData:courseDetail.nodes}}" />
+    </view>
+    <view class="question">
+      <view class="title">
+        <van-divider contentPosition="center" customStyle="color: black;">常见问题</van-divider>
+      </view>
+      <view class="issue">
+        <view class="item" wx:for="{{issue}}" wx:key="{{index}}">
+          <view class="problem">
+            <view class="circle"></view>
+            <view class="subject">{{item.question}}</view>
+          </view>
+          <view class="answer">{{item.answer}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="productList">
+      <view class="title">
+        <van-divider contentPosition="center" customStyle="color: black;">大家都在看</van-divider>
+      </view>
+      <view class="productListLoop">
+        <view class="item" wx:for="{{productList}}" wx:key="{{index}}">
+          <image src="{{item.list_pic_url}}" class="pic"></image>
+          <view class="name">{{item.name}}</view>
+          <view class="price">￥{{item.retail_price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

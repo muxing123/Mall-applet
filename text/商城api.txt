@@ -1,0 +1,38 @@
+接口根路径: "http://118.25.222.68:5757/heyushuo"
+需要自己生成一个openId,复杂唯一的字符串
+
+1.首页(get): index/index
+2.专题(get): topic/listaction?page=  参数:page:请求页数
+3.分类列表(get): category/indexaction
+4.当前分类(get): category/currentaction?id=  参数:id:分类id
+5.首页分类导航(get): category/categoryNav?id=  参数id: 分类导航id
+6.分类导航商品列表(get): goods/goodsList?categoryId= 参数id: 分类导航id
+7.搜索相关(get): search/indexaction?openId=  参数:openId: 生成的openId
+  - 包括默认关键字 搜索记录 热门搜索
+8.添加搜索历史(post): search/addhistoryaction 参数: keyword:关键字 openId:生成的openId
+9.清空搜索记录(post): search/clearhistoryAction 参数:openId:生成的openId
+10.关键字搜索: search/helperaction?keyword= 参数:keyword: 关键字
+11.首页制造商详情(get): brand/detailaction?id= 参数:id:制造商id
+12.查看全部新品:默认综合(get): /goods/goodsList?isNew=1
+13.全部新品升序排列(get):  goods/goodsList?isNew=1&order=asc
+14.全部新品降序排列(get):  goods/goodsList?isNew=1&order=desc
+15.全部新品分类排列(get): goods/goodsList?isNew=1
+16.查看全部人气推荐:默认综合(get): goods/goodsList?isHot=1
+17.人气推荐升序排列(get):  goods/goodsList?isHot=1&order=asc
+18.人气推荐降序排列(get):  goods/goodsList?isHot=1&order=desc
+19.人气推荐分类排列(get): goods/goodsList?isHot=1
+20.商品详情(get):  goods/detailaction?id=&openId= 参数:id 商品id openId:生成的openId
+21.专题详情(get):  topic/detailaction?id= 参数:id:专题id
+22.加入收藏,商品详情接口会返回是否收藏(post):  collect/addcollect 参数: goodsId:商品id openId: 生成的openId
+23.查看收藏(get):  collect/listAction?openId=  参数: openId: 生成的openId
+24.立即购买(post):  order/submitAction  参数:allPrise:总价 goodsId:商品id openId: 生成的openId
+25.购买详情(get):  order/detailAction  参数: openId: 生成的openId addressId: 地址id
+26.新增地址(post): address/saveAction 参数: address(省市区) addressId: '' checked:是否默认 detailadress: 地址详情 openId: 生成的openId telNumber:电话 userName: 姓名
+27.获取全部地址(get): address/getListAction?openId=  openId: 生成的openId
+28.单个地址详情(get): address/detailAction?id= 参数: id: 地址id
+29.修改地址(post): 同新增地址一样 addressId传地址id
+30.加入购物车(post): cart/addCart  参数: goodsId:商品id number:数量 openId:生成的openId
+31.查看购物车(get): cart/cartList?openId= 参数: openId: 生成的openId
+32.删除购物车(get): cart/deleteAction?id= 参数: 商品id
+
+ 

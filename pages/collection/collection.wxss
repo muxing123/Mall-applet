@@ -1,0 +1,46 @@
+/* pages/collection/collection.wxss */
+
+.collection {
+  background: #f2f2f2;
+}
+
+.collection .titleBar {
+  font-weight: bold;
+  text-align: center;
+  background: white;
+  padding: 30rpx;
+}
+
+.collection .scrollset {
+  height: 1100rpx;
+}
+
+.collection .goodsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.collection .goodsList .item {
+  width: 49.5%;
+  background: white;
+  margin-top: 4rpx;
+  text-align: center;
+}
+
+.collection .goodsList .pic {
+  width: 100%;
+  height: 300rpx;
+}
+
+.collection .goodsList .item .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collection .goodsList .item .price {
+  font-size: 26rpx;
+  color: red;
+  padding: 10rpx 0;
+}

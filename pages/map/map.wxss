@@ -1,0 +1,27 @@
+/* pages/map/map.wxss */
+.map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.map .addressList {
+  padding: 0 20rpx;
+}
+.map .addressList .item {
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.map .addressList .item .address {
+  font-size: 26rpx;
+  color: #969696;
+  padding-top: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.map .mapcomponents {
+  width: 100%;
+  height: 100%;
+}

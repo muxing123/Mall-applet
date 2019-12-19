@@ -1,0 +1,9 @@
+/* components/index/wheel/wheel.wxss */
+.radius .box {
+  width: 100%;
+  height: 100%;
+}
+.radius .box .img {
+  width: 100%;
+  height: 100%;
+}

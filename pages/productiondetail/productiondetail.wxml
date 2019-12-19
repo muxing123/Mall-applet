@@ -1,0 +1,20 @@
+<!--pages/productiondetail/productiondetail.wxml-->
+<view class="productiondetail {{goodsList.length > 0 ? '' : 'position'}}">
+  <view class="brand">
+    <image src="{{production.list_pic_url}}" class="brandImg"></image>
+    <view class="name">{{production.name}}</view>
+  </view>
+  <view class="desc">{{production.simple_desc}}</view>
+  <view class="inner" wx:if="{{goodsList.length > 0}}">
+    <scroll-view scroll-y="true" class="scrollset">
+      <view class="goodsList">
+        <view class="item" wx:for="{{goodsList}}" wx:key="{{index}}">
+          <image src="{{item.list_pic_url}}" class="pic"></image>
+          <view class="name">{{item.name}}</view>
+          <view class="price">￥{{item.retail_price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view wx:else class="toast">暂无数据哦...</view>
+</view>

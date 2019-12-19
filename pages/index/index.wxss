@@ -1,0 +1,111 @@
+/**index.wxss**/
+
+.index .top {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.index .top .left {
+  flex:1;
+  padding-right: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 100;
+  height: 108rpx;
+  line-height: 108rpx;
+  }
+
+.index .top .right {
+  flex:4;
+  z-index: 0;
+}
+
+.index .inner .scrollset {
+  height: 1000rpx;
+}
+
+.index .inner .scrollset .brandList {
+  padding-bottom: 26rpx;
+}
+
+.index .inner .scrollset .brandList .title {
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.index .inner .scrollset .brandList .brandListLoop {
+  display: flex;
+  padding: 0 26rpx;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.index .inner .scrollset .brandList .brandListLoop .item {
+  width: 48%;
+  font-size: 26rpx;
+  position: relative;
+  padding-bottom: 4rpx;
+}
+
+.index .inner .scrollset .brandList .brandListLoop .item .pic {
+  width: 100%;
+  height: 260rpx;
+}
+
+.index .inner .scrollset .brandList .brandListLoop .item .namePrice {
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+}
+
+.index .inner .scrollset .brandList .brandListLoop .item .namePrice .price {
+  font-size: 24rpx;
+  color: #969696;
+  padding-top: 4rpx;
+}
+
+.index .inner .scrollset .topicList .title {
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.index .inner .scrollset .topicList .scroll-view_H .topicListLoop {
+  display: flex;
+}
+
+.index .inner .scrollset .topicList .scroll-view_H .topicListLoop .item {
+  padding: 20rpx;
+  font-size: 30rpx;
+  width: 640rpx;
+}
+
+.index .inner .scrollset .topicList .scroll-view_H .topicListLoop .item .pic {
+  height: 380rpx;
+}
+
+.index .inner .scrollset .topicList .scroll-view_H .topicListLoop .item .titlePrice {
+  display: flex;
+  align-items: center;
+}
+
+.index .inner .scrollset .topicList .scroll-view_H .topicListLoop .item .titlePrice .price_info {
+  color: red;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+}
+
+.index .inner .scrollset .topicList .scroll-view_H .topicListLoop .item .subtitle {
+  color: #969696;
+  font-size: 26rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.index .inner .scrollset .bg {
+  background: #f2f3f4;
+}

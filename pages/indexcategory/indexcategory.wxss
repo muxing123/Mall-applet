@@ -1,0 +1,58 @@
+/* pages/indexcategory/indexcategory.wxss */
+.indexcategory {
+  background: #f2f2f2;
+}
+.indexcategory .inner {
+  margin-top: 20rpx;
+}
+
+.indexcategory .inner .titleBar {
+  text-align: center;
+  background: white;
+}
+
+.indexcategory .inner .titleBar .name {
+  font-weight: bold;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+}
+
+.indexcategory .inner .titleBar .desc {
+  color: #969696;
+  font-size: 26rpx;
+  padding-bottom: 20rpx;
+}
+
+.indexcategory .inner .scrollset {
+  height: 970rpx;
+}
+
+.indexcategory .inner .goodsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.indexcategory .inner .goodsList .item {
+  width: 49.5%;
+  background: white;
+  margin-top: 4rpx;
+  text-align: center;
+}
+
+.indexcategory .inner .goodsList .pic {
+  width: 100%;
+  height: 300rpx;
+}
+
+.indexcategory .inner .goodsList .item .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.indexcategory .inner .goodsList .item .price {
+  font-size: 26rpx;
+  color: red;
+  padding: 10rpx 0;
+}

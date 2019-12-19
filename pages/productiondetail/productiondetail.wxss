@@ -1,0 +1,76 @@
+/* pages/productiondetail/productiondetail.wxss */
+.productiondetail {
+  background: #f2f2f2;
+}
+.position {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.productiondetail .brand {
+  position: relative;
+  background: white;
+}
+
+.productiondetail .brand .brandImg {
+  width: 100%;
+  height: 300rpx;
+}
+
+.productiondetail .brand .name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30rpx;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 6rpx;
+  border-bottom: 6rpx solid white;
+}
+.productiondetail .desc {
+  padding: 30rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #969696;
+  background: white;
+}
+.productiondetail .inner {
+  margin-top: 20rpx;
+}
+.productiondetail .inner .scrollset {
+  height: 1000rpx;
+}
+.productiondetail .inner .goodsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.productiondetail .inner .goodsList .item {
+  width: 49.5%;
+  background: white;
+  margin-top: 4rpx;
+  text-align: center;
+}
+.productiondetail .inner .goodsList .pic {
+  width: 100%;
+  height: 300rpx;
+}
+.productiondetail .inner .goodsList .item .name {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+.productiondetail .inner .goodsList .item .price {
+  font-size: 26rpx;
+  color: red;
+  padding: 10rpx 0;
+}
+.productiondetail .toast {
+  text-align: center;
+  padding-top: 200rpx;
+  font-size: 26rpx;
+  color: #969696;
+}

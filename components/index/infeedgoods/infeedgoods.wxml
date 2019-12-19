@@ -1,0 +1,21 @@
+<!--components/index/infeedgoods/infeedgoods.wxml-->
+<view class="infeedgoods">
+  <view class="titleBar {{type === 2 ? 'yellow' : ''}}">
+    <view class="title" wx:if="{{type === 1}}">新品首发</view>
+    <view class="titletwo" wx:if="{{type === 2}}">人气推荐·好物精选</view>
+    <view class="btn" wx:if="{{type === 1}}" bindtap="goLook" data-type="{{type}}" data-title="新品首发">查看更多</view>
+    <view class="btntwo" wx:if="{{type === 2}}" bindtap="goLook" data-type="{{type}}" data-title="人气推荐">查看更多</view>
+  </view>
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view class="newGoodsLoop">
+      <view class="item" wx:for="{{newGoods}}" wx:key="{{index}}">
+        <image src="{{item.list_pic_url}}" class="pic"></image>
+        <view class="namePrice">
+          <view class="name">{{item.name}}</view>
+          <view class="goods_brief">{{item.goods_brief}}</view>
+          <view class="retail_price">￥{{item.retail_price}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

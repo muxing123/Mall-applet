@@ -1,0 +1,35 @@
+<!--pages/address/address.wxml-->
+<view class="address">
+  <view class="bottom">
+    <view class="btn red" bindtap="goAddressEdit">+新建地址</view>
+    <view class="btn green">一键导入微信地址</view>
+  </view>
+  <view wx:if="{{addressList.length > 0}}" class="addressList">
+    <van-swipe-cell left-width="{{ 20 }}" right-width="{{ 60 }}" wx:for="{{addressList}}" wx:key="{{index}}">
+      <view slot="right" class="del" bindtap="del" data-id="{{item.id}}">删除</view>
+      <van-cell center="true" title-width="600rpx" bind:click="goPayment" data-id="{{item.id}}" clickable>
+        <view slot="right-icon" class="default" bindtap="goAddressEdit" data-id="{{item.id}}">
+          <image src="../../images/edit.png" class="img"></image>
+        </view>
+        <view slot="title" class="title-content">
+          <view class="unified">
+            <view class="name">{{item.name}}</view>
+            <view class="rightSide">{{item.mobile}}</view>
+          </view>
+          <view class="unified">
+            <view class="name" wx:if="{{item.is_default}}">
+              <text class="tag">默认</text>
+            </view>
+            <view class="rightSide">{{item.address}}{{item.address_detail}}</view>
+          </view>
+        </view>
+      </van-cell>
+    </van-swipe-cell>
+  </view>
+  <view wx:else class="tip">
+    <view>
+      <image src="../../images/address.jpeg" class="img"></image>
+      <view>收货地址在哪里？</view>
+    </view>
+  </view>
+</view>

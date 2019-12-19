@@ -1,0 +1,112 @@
+/* pages/payment/payment.wxss */
+
+.payment {
+  background: #f2f2f2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.payment .addressBar .bgImg {
+  background: url("http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/address-bg-bd30f2bfeb.png");
+  height: 20rpx;
+}
+
+.payment .addressBar .addressList {
+  padding: 20rpx 30rpx;
+  background: white;
+  position: relative;
+}
+
+.payment .addressBar .addressList .tip {
+  position: relative;
+  top: 18rpx;
+}
+
+.payment .addressBar .addressList .unified {
+  display: flex;
+}
+
+.payment .addressBar .addressList .unified .name {
+  width: 15%;
+}
+
+.payment .addressBar .addressList .unified .tag {
+  font-size: 20rpx;
+  color: red;
+  border: 2rpx solid red;
+  padding: 0 6rpx;
+}
+
+.payment .addressBar .addressList .van-icon {
+  position: absolute;
+  top: 46rpx;
+  right: 60rpx;
+}
+
+.payment .goodsDetail {
+  margin: 20rpx 0;
+  padding: 0 30rpx;
+  background: white;
+  font-size: 30rpx;
+}
+
+.payment .goodsDetail .same {
+  display: flex;
+  padding: 30rpx 0;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.payment .goodsList {
+  background: white;
+}
+.payment .goodsList .item {
+  display: flex;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.payment .goodsList .pic {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.payment .goodsList .right {
+  width: 60%;
+  margin: auto 0;
+  font-size: 26rpx;
+}
+
+.payment .goodsList .right .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.payment .goodsList .item .number {
+  display: flex;
+  align-items: center;
+  color: #969696;
+  padding-left: 50rpx;
+}
+.payment .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  position: absolute;
+  bottom: 0;
+  background: white;
+}
+.payment .bottom .left {
+  padding: 30rpx 20rpx
+}
+.payment .bottom .right {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  color: white;
+}

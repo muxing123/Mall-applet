@@ -1,0 +1,39 @@
+/* pages/mine/mine.wxss */
+
+.mine .login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: #c20c0c;
+  padding: 20rpx;
+}
+
+.mine .login .left {
+  display: flex;
+  align-items: center;
+  font-size: 40rpx;
+  width: 80%;
+}
+
+.mine .login .left .img {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  margin-right: 36rpx;
+}
+
+.mine .login .left .text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mine .login .btn {
+  width: 100rpx;
+  margin: 0;
+  border: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}

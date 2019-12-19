@@ -1,0 +1,46 @@
+<!--pages/shoppingcart/shoppingcart.wxml-->
+<view class="shoppingcart">
+  <view class="advantage">
+    <view class="item">
+      <view class="circle"></view>
+      <view>30天无忧退货</view>
+    </view>
+    <view class="item">
+      <view class="circle"></view>
+      <view>48小时快速退款</view>
+    </view>
+    <view class="item">
+      <view class="circle"></view>
+      <view>满88元免邮费</view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="scrollset">
+    <view class="goodsList">
+      <van-swipe-cell left-width="{{ 20 }}" right-width="{{ 60 }}" wx:for="{{goodsList}}" wx:key="{{index}}">
+        <view slot="right" class="del" bindtap="del" data-id="{{item.id}}">删除</view>
+        <van-cell value="x{{item.number}}" center="true" title-width="600rpx" bind:click="setSel" data-index="{{index}}">
+          <view slot="icon" class="icon">
+            <image src="../../images/hook.png" wx:if="{{item.sel}}" class="img"></image>
+            <image src="../../images/hooksel.png" wx:else class="img"></image>
+          </view>
+          <view slot="title">
+            <view class="title-content">
+              <image src="{{item.list_pic_url}}" class="pic"></image>
+              <view class="right">
+                <view class="name">{{item.goods_name}}</view>
+                <view class="price">￥{{item.retail_price}}</view>
+              </view>
+            </view>
+          </view>
+        </van-cell>
+      </van-swipe-cell>
+    </view>
+  </scroll-view>
+  <van-submit-bar price="{{ total * 100 }}" button-text="提交订单" bind:submit="onSubmit">
+    <view class="selAll" bindtap="setSelAll">
+      <image src="../../images/hook.png" wx:if="{{selAll}}" class="img"></image>
+      <image src="../../images/hooksel.png" wx:else class="img"></image>
+      <view>全选 ({{count}})</view>
+    </view>
+  </van-submit-bar>
+</view>

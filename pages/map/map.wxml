@@ -1,0 +1,11 @@
+<!--pages/map/map.wxml-->
+<view class="map">
+  <van-search value="{{ value }}" placeholder="请输入搜索地址" shape="round" bind:change="onChange" bind:search="onSearch"/>
+  <view class="addressList" wx:if="{{addressList.length > 0}}">
+    <view class="item" wx:for="{{addressList}}" wx:key="{{index}}" bindtap="setLocation" data-location="{{item.location}}" data-title="{{item.title}}">
+      <view class="title">{{item.title}}</view>
+      <view class="address">{{item.address}}</view>
+    </view>
+  </view>
+  <map class="mapcomponents" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}" wx:else bindtap="clickMap"></map>
+</view>

@@ -1,0 +1,69 @@
+/* pages/sort/sort.wxss */
+.sort .inner {
+  display: flex;
+  justify-content: space-between;
+}
+.sort .inner .categoryList {
+  width: 20%;
+}
+.sort .inner .categoryList .item {
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.red {
+  color: red;
+  border-left: 6rpx solid red;
+  background: #f2f2f2;
+}
+.sort .inner .currentOne {
+  padding: 0 20rpx;
+  width: 80%;
+}
+.sort .inner .currentOne .scrollset {
+  height: 1000rpx;
+}
+.sort .inner .currentOne .banner {
+  position: relative;
+}
+.sort .inner .currentOne .banner .bannerImg {
+  width: 100%;
+  height: 300rpx;
+}
+.sort .inner .currentOne .banner .desc {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.sort .inner .currentOne .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.sort .inner .currentOne .title .line {
+  width: 60rpx;
+  border-top: 2rpx solid #969696;
+}
+.sort .inner .currentOne .title .name {
+  padding: 0 10rpx;
+  font-size: 30rpx;
+}
+.sort .inner .currentOne .subList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sort .inner .currentOne .subList .item {
+  width: 33%;
+}
+.sort .inner .currentOne .subList .item .pic {
+  width: 100%;
+  height: 200rpx;
+}
+.sort .inner .currentOne .subList .item .name {
+  text-align: center;
+  padding-bottom: 20rpx;
+  font-size: 26rpx;
+}

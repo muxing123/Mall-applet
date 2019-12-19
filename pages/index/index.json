@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "wheel": "../../components/index/wheel/wheel",
+    "van-grid": "../../lib/vant/grid/index",
+    "van-grid-item": "../../lib/vant/grid-item/index",
+    "infeedgoods":"../../components/index/infeedgoods/infeedgoods",
+    "goodslist": "../../components/index/goodslist/goodslist",
+    "van-search": "../../lib/vant/search/index"
+  }
+}

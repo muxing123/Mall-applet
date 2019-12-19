@@ -1,0 +1,24 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <van-search value="{{ keyword }}" placeholder="请输入关键词" show-action bind:search="onSearch" bind:cancel="onCancel" shape="round" bind:change="onChange" />
+  <view class="keywords" wx:if="{{keywords.length > 0 && keyword !== ''}}">
+    <view class="item" wx:for="{{keywords}}" wx:key="{{index}}" bindtap="addHistory" data-id="{{item.id}}">{{item.name}}</view>
+  </view>
+  <view wx:else>
+    <view class="historyData" wx:if="{{historyData.length > 0}}">
+      <view class="title">
+        <view class="left">搜索历史</view>
+        <van-icon name="delete" bind:click="del"/>
+      </view>
+      <view class="historyDataLoop">
+        <view class="item" wx:for="{{historyData}}" wx:key="{{index}}" bindtap="setKeyword" data-keyword="{{item.keyword}}">{{item.keyword}}</view>
+      </view>
+    </view>
+    <view class="hotKeywordList">
+      <view class="title">热门搜索</view>
+      <view class="hotKeywordListLoop">
+        <view class="item {{index === 0 ? 'red' : ''}}" wx:for="{{hotKeywordList}}" wx:key="{{index}}" bindtap="setKeyword" data-keyword="{{item.keyword}}">{{item.keyword}}</view>
+      </view>
+    </view>
+  </view>
+</view>

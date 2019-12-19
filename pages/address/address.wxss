@@ -1,0 +1,67 @@
+/* pages/address/address.wxss */
+.address .bottom {
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.address .bottom .btn {
+  width: 45%;
+  padding: 16rpx 0;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 26rpx; 
+}
+.red {
+  color: red;
+  border: 2rpx solid red;
+  margin-left: 20rpx;
+}
+.green {
+  color: green;
+  border: 2rpx solid green;
+  margin-right: 20rpx;
+}
+.address .addressList .del {
+  background: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 120rpx;
+}
+.address .addressList .default .img {
+  width: 60rpx;
+  height: 60rpx;
+}
+.address .addressList .title-content .unified{
+  display: flex;
+}
+.address .addressList .title-content .unified .name {
+  width: 15%;
+}
+.address .addressList .title-content .unified .tag {
+  font-size: 20rpx;
+  color: red;
+  border: 2rpx solid red;
+  padding: 0 6rpx;
+}
+.address .tip {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address .tip .img {
+  height: 600rpx; 
+}

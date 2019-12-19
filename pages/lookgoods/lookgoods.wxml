@@ -1,0 +1,27 @@
+<!--pages/lookgoods/lookgoods.wxml-->
+<view class="lookgoods">
+  <view class="banner">
+    <image src="../../images/newgoods.jpeg" class="bannerImg" wx:if="{{type === 1}}"></image>
+    <image src="../../images/hotgoods.jpg" class="bannerImg" wx:if="{{type === 2}}"></image>
+  </view>
+  <view class="optionBar">
+    <view class="option {{num === 1 ? 'red' : ''}}" bindtap="setNum" data-num="{{1}}">综合</view>
+    <view class="option {{order !== '' ? 'red' : ''}}">
+      价格
+      <van-icon name="arrow-up" class="up" size="20rpx" color="{{order === 'asc' ? 'red' : ''}}" bind:click="setOrder" data-order="asc" />
+      <van-icon name="arrow-down" class="down" size="20rpx" color="{{order === 'desc' ? 'red' : ''}}" bind:click="setOrder" data-order="desc" />
+    </view>
+    <view class="option {{num === 2 ? 'red' : ''}}" bindtap="setNum" data-num="{{2}}">分类</view>
+  </view>
+  <view class="inner">
+    <scroll-view scroll-y="true" class="scrollset">
+      <view class="goodsList">
+        <view class="item" wx:for="{{goodsList}}" wx:key="{{index}}">
+          <image src="{{item.list_pic_url}}" class="pic"></image>
+          <view class="name">{{item.name}}</view>
+          <view class="price">￥{{item.retail_price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

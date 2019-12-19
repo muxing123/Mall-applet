@@ -1,0 +1,13 @@
+<!--pages/collection/collection.wxml-->
+<view class="collection">
+  <view class="titleBar">我的收藏</view>
+  <scroll-view scroll-y="true" class="scrollset">
+    <view class="goodsList">
+      <view class="item" wx:for="{{collectGoodsList}}" wx:key="{{index}}" bindtap="goGoodsDetail" data-id="{{item.id}}">
+        <image src="{{item.list_pic_url}}" class="pic"></image>
+        <view class="name">{{item.name}}</view>
+        <view class="price">￥{{item.retail_price}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

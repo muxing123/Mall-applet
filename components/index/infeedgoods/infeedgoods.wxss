@@ -1,0 +1,66 @@
+/* components/index/infeedgoods/infeedgoods.wxss */
+.infeedgoods .titleBar {
+  height: 240rpx;
+  background: #D2F6F7;
+  text-align: center;
+}
+.yellow {
+  background: #FAF09B !important;
+}
+.infeedgoods .titleBar .title {
+  color: #669A9C;
+  padding: 60rpx 0 20rpx;
+}
+.infeedgoods .titleBar .titletwo {
+  color: #C6C08B;
+  padding: 60rpx 0 20rpx;
+}
+.infeedgoods .titleBar .btn {
+  width: 130rpx;
+  padding: 6rpx 18rpx;
+  background: #669A9C;
+  margin: 0 auto;
+  font-size: 24rpx;
+  color: #D2F6F7;
+}
+.infeedgoods .titleBar .btntwo {
+  width: 130rpx;
+  padding: 6rpx 18rpx;
+  background: #C6C08B;
+  margin: 0 auto;
+  font-size: 24rpx;
+  color: #FAF09B;
+}
+.infeedgoods .scroll-view_H .newGoodsLoop {
+  display: flex;
+  padding-bottom: 30rpx; 
+}
+.infeedgoods .scroll-view_H .newGoodsLoop .item {
+  font-size: 30rpx;
+  width: 300rpx;
+}
+.infeedgoods .scroll-view_H .newGoodsLoop .item .pic {
+  width: 100%;
+  height: 270rpx;
+}
+.infeedgoods .scroll-view_H .newGoodsLoop .item .namePrice {
+  padding: 20rpx;
+}
+.infeedgoods .scroll-view_H .newGoodsLoop .item .name {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+.infeedgoods .scroll-view_H .newGoodsLoop .item .goods_brief {
+  color: #969696;
+  font-size: 26rpx;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  padding-top: 4rpx; 
+}
+.infeedgoods .scroll-view_H .newGoodsLoop .item .retail_price {
+  color: red;
+  font-size: 26rpx;
+  padding-top: 4rpx;
+}

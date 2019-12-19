@@ -1,0 +1,10 @@
+<!--pages/specialdetail/specialdetail.wxml-->
+<import src="../../lib/wxParse/wxParse.wxml" />
+<view class="specialdetail">
+  <template is="wxParse" data="{{wxParseData:courseDetail.nodes}}" />
+  <view class="titleCenter">专题推荐</view>
+  <view class="item" wx:for="{{recommendList}}" wx:key="{{index}}">
+    <image src="{{item.scene_pic_url}}" class="pic"></image>
+    <view class="title">{{item.title}}</view>
+  </view>
+</view>

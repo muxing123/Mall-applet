@@ -1,0 +1,21 @@
+<!--pages/indexcategory/indexcategory.wxml-->
+<view class="indexcategory">
+  <van-tabs active="{{ active }}" bind:click="setSel">
+    <van-tab wx:for="{{categoryList}}" wx:key="{{index}}" title="{{item.name}}" name="{{item.id}}"></van-tab>
+  </van-tabs>
+  <view class="inner">
+    <view class="titleBar">
+      <view class="name">{{currentNav.name}}</view>
+      <view class="desc">{{currentNav.front_desc}}</view>
+    </view>
+    <scroll-view scroll-y="true" class="scrollset">
+      <view class="goodsList">
+        <view class="item" wx:for="{{goodsList}}" wx:key="{{index}}">
+          <image src="{{item.list_pic_url}}" class="pic"></image>
+          <view class="name">{{item.name}}</view>
+          <view class="price">￥{{item.retail_price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

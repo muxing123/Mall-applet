@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-goods-action": "../../lib/vant/goods-action/index",
+    "van-goods-action-icon": "../../lib/vant/goods-action-icon/index",
+    "van-goods-action-button": "../../lib/vant/goods-action-button/index",
+    "van-icon": "../../lib/vant/icon/index",
+    "van-divider": "../../lib/vant/divider/index",
+    "van-popup": "../../lib/vant/popup/index",
+    "van-stepper": "../../lib/vant/stepper/index"
+  }
+}

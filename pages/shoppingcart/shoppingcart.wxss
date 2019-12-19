@@ -1,0 +1,69 @@
+/* pages/shoppingcart/shoppingcart.wxss */
+
+.shoppingcart {
+  background: #ebedef; 
+}
+.shoppingcart .advantage {
+  display: flex;
+  background: #ebedef;
+  padding: 20rpx;
+  font-size: 26rpx;
+}
+
+.shoppingcart .advantage .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.shoppingcart .advantage .item .circle {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  border: 2rpx solid red;
+  margin-right: 10rpx;
+}
+.shoppingcart .scrollset {
+  height: 930rpx;
+}
+.shoppingcart .scrollset .goodsList .del {
+  width: 120rpx;
+  height: 100%;
+  background: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shoppingcart .scrollset .goodsList .icon .img {
+  width: 30rpx;
+  height: 30rpx;
+}
+.shoppingcart .scrollset .goodsList .title-content {
+  display: flex;
+}
+.shoppingcart .scrollset .goodsList .title-content .pic {
+  width: 160rpx;
+  height: 160rpx;
+}
+.shoppingcart .scrollset .goodsList .title-content .right {
+  margin: auto 0;
+  font-size: 26rpx;
+}
+.shoppingcart .scrollset .goodsList .title-content .right .name {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+.shoppingcart .selAll {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}
+.shoppingcart .selAll .img {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}

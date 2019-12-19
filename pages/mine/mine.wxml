@@ -1,0 +1,19 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine">
+  <view class="login">
+    <view class="left">
+      <image src="{{userInfo.avatarUrl}}" class="img" wx:if="{{userInfo.avatarUrl}}"></image>
+      <image src="../../images/avatar.png" class="img" wx:else></image>
+      <view wx:if="{{userInfo.nickName}}" class="text">{{userInfo.nickName}}</view>
+      <view wx:else>点击登录</view>
+    </view>
+    <button plain="{{true}}" class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <van-icon name="arrow" size="30" />
+    </button>
+  </view>
+  <view class="option">
+    <van-grid column-num="3" clickable>
+      <van-grid-item wx:for="{{option}}" wx:key="{{index}}" icon="{{item.icon}}" text="{{item.name}}" bind:click="goJump" data-index="{{index}}" />
+    </van-grid>
+  </view>
+</view>

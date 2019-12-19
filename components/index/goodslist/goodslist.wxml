@@ -1,0 +1,16 @@
+<!--components/index/goodslist/goodslist.wxml-->
+<view class="goodslist">
+  <view class="title">{{category.name}}</view>
+  <view class="goodsListLoop">
+    <view class="item" wx:for="{{category.goodsList}}" wx:key="{{index}}">
+      <image src="{{item.list_pic_url}}" class="pic"></image>
+      <view class="name">{{item.name}}</view>
+      <view class="price">￥{{item.retail_price}}</view>
+    </view>
+    <view class="jump" bindtap="goIndexCategory" data-id="{{category.id}}">
+      <view>{{category.name}}</view>
+      <image src="../../../images/arrow.png" class="arrow"></image>
+    </view>
+  </view>
+  <view class="bottom"></view>
+</view>

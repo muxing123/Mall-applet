@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="index">
+  <view class="top">
+    <view class="left" wx:if="{{address}}" bindtap="setAddress">{{address}}</view>
+    <view class="left" wx:else>定位中...</view>
+    <view class="right">
+     <van-search value="{{ value }}" placeholder="请输入关键词" shape="round"  bindchange="goSearch" />
+    </view>
+  </view>
+  <view class="inner">
+    <scroll-view scroll-y="true" class="scrollset">
+      <wheel banner="{{banner}}"></wheel>
+      <view class="channel">
+        <van-grid column-num="5" border="{{false}}">
+          <van-grid-item icon="{{item.icon_url}}" text="{{item.name}}" wx:for="{{channel}}" wx:key="{{index}}" bindclick="goIndexCategory" data-id="{{item.id}}" />
+        </van-grid>
+      </view>
+      <view class="brandList">
+        <view class="title">品牌制造商直供</view>
+        <view class="brandListLoop">
+          <view class="item" wx:for="{{brandList}}" wx:key="{{index}}" bindtap="goProduction" data-id="{{item.id}}">
+            <image src="{{item.new_pic_url}}" class="pic"></image>
+            <view class="namePrice">
+              <view class="name">{{item.name}}</view>
+              <view class="price">{{item.floor_price}}元起</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <infeedgoods newGoods="{{newGoods}}" type="{{1}}"></infeedgoods>
+      <infeedgoods newGoods="{{hotGoods}}" type="{{2}}"></infeedgoods>
+      <view class="topicList">
+        <view class="title">专题精选</view>
+        <scroll-view class="scroll-view_H" scroll-x="true">
+          <view class="topicListLoop">
+            <view class="item" wx:for="{{topicList}}" wx:key="{{index}}">
+              <image src="{{item.item_pic_url}}" class="pic"></image>
+              <view class="titlePrice">
+                <view class="title">{{item.title}}</view>
+                <view class="price_info">￥{{item.price_info}}起</view>
+              </view>
+              <view class="subtitle">{{item.subtitle}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="bg">
+        <goodslist wx:for="{{newCategoryList}}" wx:key="{{index}}" category="{{item}}"></goodslist>
+      </view>
+    </scroll-view>
+  </view>
+</view>

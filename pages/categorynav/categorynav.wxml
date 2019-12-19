@@ -1,0 +1,23 @@
+<!--pages/categorynav/categorynav.wxml-->
+<view class="categorynav">
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view class="subListLoop">
+      <view class="item {{sel === index ? 'red' : ''}}" wx:for="{{currentOne.subList}}" wx:key="{{index}}" bindtap="setSel" data-sid="{{item.id}}" data-index="{{index}}">{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <view class="inner">
+    <view class="titleBar">
+      <view class="name">{{currentNav.name}}</view>
+      <view class="desc">{{currentNav.front_desc}}</view>
+    </view>
+    <scroll-view scroll-y="true" class="scrollset">
+      <view class="goodsList">
+        <view class="item" wx:for="{{goodsList}}" wx:key="{{index}}" bindtap="goGoodsDetail" data-id="{{item.id}}">
+          <image src="{{item.list_pic_url}}" class="pic"></image>
+          <view class="name">{{item.name}}</view>
+          <view class="price">￥{{item.retail_price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

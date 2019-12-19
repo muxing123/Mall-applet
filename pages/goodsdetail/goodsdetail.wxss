@@ -1,0 +1,203 @@
+/* pages/goodsdetail/goodsdetail.wxss */
+@import "../../lib/wxParse/wxParse.wxss";
+
+.red .van-goods-action-icon__icon{
+  color: red;
+}
+.goodsdetail .inner {
+  padding-bottom: 112rpx;
+}
+.goodsdetail .inner .gallery swiper {
+  height: 750rpx;
+}
+
+.goodsdetail .inner .gallery .radius .box .img {
+  width: 100%;
+  height: 750rpx;
+}
+
+.goodsdetail .inner .advantage {
+  display: flex;
+  background: #ebedef;
+  padding: 20rpx;
+  font-size: 26rpx;
+}
+
+.goodsdetail .inner .advantage .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.goodsdetail .inner .advantage .item .circle {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  border: 2rpx solid red;
+  margin-right: 10rpx;
+}
+
+.goodsdetail .inner .info {
+  text-align: center;
+}
+
+.goodsdetail .inner .info .name {
+  padding: 20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.goodsdetail .inner .info .brief {
+  color: #969696;
+  font-size: 28rpx;
+  padding-bottom: 20rpx;
+}
+
+.goodsdetail .inner .info .price {
+  color: red;
+  padding-bottom: 60rpx;
+}
+
+.goodsdetail .inner .info .specifications {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2rpx solid #f2f2f2;
+  padding: 30rpx 20rpx;
+  font-size: 26rpx;
+}
+.goodsdetail .inner .info .specifications .van-icon {
+  z-index: -1;
+}
+.goodsInfo {
+  display: flex;
+  padding: 30rpx;
+  align-items: flex-end;
+}
+.goodsInfo .pic {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+}
+.goodsInfo .right .goodsprice {
+  color: red;
+  padding-bottom: 10rpx;
+}
+.num {
+  text-align: left;
+  padding: 0 0 20rpx 30rpx;
+}
+.van-stepper {
+  text-align: left;
+  padding-left: 30rpx;
+}
+.goodsdetail .inner .attribute {
+  padding: 20rpx 0 40rpx;
+  background: #ebedef;
+}
+
+.goodsdetail .inner .attribute .content {
+  background: white;
+}
+
+.goodsdetail .inner .attribute  .content .title {
+  padding: 20rpx;
+}
+
+.goodsdetail .inner .attribute  .content .attributeLoop {
+  padding: 0 36rpx 40rpx;
+  font-size: 26rpx;
+}
+
+.goodsdetail .inner .attribute  .content .attributeLoop .item {
+  display: flex;
+  align-items: center;
+  background: #ebedef;
+  padding: 16rpx 0;
+  margin-bottom: 10rpx;
+}
+
+.goodsdetail .inner .attribute  .content .attributeLoop .item .name {
+  color: #969696;
+  width: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.goodsdetail .inner .attribute  .content .attributeLoop .item .value {
+  width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.goodsdetail .inner .desc {
+  padding: 0 10rpx;
+  font-size: 0;
+}
+.goodsdetail .inner .desc .wxParse-img{
+  display: block !important;
+}
+.goodsdetail .inner .question .title {
+  padding: 30rpx 0;
+}
+.goodsdetail .inner .question .title .van-divider {
+  width: 40%;
+  margin: 0 auto;
+}
+.goodsdetail .inner .question .issue {
+  padding: 16rpx;
+}
+.goodsdetail .inner .question .issue .item {
+  font-size: 30rpx;
+}
+.goodsdetail .inner .question .issue .item .problem{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.goodsdetail .inner .question .issue .item .problem .circle {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: red;
+  margin-right: 10rpx;
+}
+.goodsdetail .inner .question .issue .item .answer {
+  font-size: 26rpx;
+  color: #969696;
+}
+.goodsdetail .inner .productList .title {
+  padding: 30rpx 0;
+}
+.goodsdetail .inner .productList .title .van-divider {
+  width: 40%;
+  margin: 0 auto;
+}
+.goodsdetail .inner .productList .productListLoop {
+  margin-top: 20rpx;
+  background: #ebedef;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.goodsdetail .inner .productList .productListLoop .item {
+  width: 49.5%;
+  background: white;
+  margin-top: 4rpx;
+  text-align: center;
+}
+.goodsdetail .inner .productList .productListLoop .item .pic {
+  width: 100%;
+  height: 300rpx;
+}
+.goodsdetail .inner .productList .productListLoop .item .name {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+.goodsdetail .inner .productList .productListLoop .item .price {
+  font-size: 26rpx;
+  color: red;
+  padding: 10rpx 0;
+}

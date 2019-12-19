@@ -1,0 +1,12 @@
+<!--pages/special/special.wxml-->
+<view class="special">
+  <view class="topicListLoop">
+    <view class="item" wx:for="{{topicList}}" wx:key="{{index}}" bindtap="goSpecialDetail" data-id="{{item.id}}">
+      <image src="{{item.scene_pic_url}}" class="pic"></image>
+      <view class="title">{{item.title}}</view>
+      <view class="subtitle">{{item.subtitle}}</view>
+      <view class="price_info">￥{{item.price_info}}起</view>
+    </view>
+  </view>
+  <view class="bottom" wx:if="{{show}}">--已全部加载--</view>
+</view>
